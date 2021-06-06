@@ -1,4 +1,4 @@
-# Pstage_03_KLUE_Relation_extraction
+# Pstage02 (KLUE) Relation extraction
 
 ### training
 * python train.py
