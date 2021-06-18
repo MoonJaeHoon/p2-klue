@@ -27,8 +27,8 @@ from k_th_plot_from_logs import k_th_plot_from_logs
 import warnings
 warnings.filterwarnings(action='ignore')  # 'default'
 
-project_qualified_name = 'jh951229/Pstage-2-EntityRelationExtraction'
-API_Token = 'eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiIzMmYwY2E4Ny0yYTg5LTRiZmQtODNjZC1mMzRmN2Q5ODFkNDkifQ=='
+project_qualified_name = '[Your Project Name]'
+API_Token = "[Your API TOKEN]"
 
 neptune.init(project_qualified_name=project_qualified_name,api_token=API_Token)
 
@@ -78,7 +78,7 @@ def lower_dir_search(dirname):  # 모델저장된 체크포인트 폴더 경로�
 
 def train(args):  # + inference 과정까지 추가하였습니다.
   assert sum([args.use_kfold,args.use_simple_fold,args.no_valid])==1
-  assert (args.concat_exp_p==0 or args.concat_log_p==0)
+  # assert (args.concat_exp_p==0 or args.concat_log_p==0)
   # assert args.eval_steps == args.logging_steps
   if args.use_kfold==True:
     assert (args.num_fold_k>=2)
@@ -119,7 +119,6 @@ def train(args):  # + inference 과정까지 추가하였습니다.
 
   #################################################################################################
   #################################################################################################
-  elif args.use_kfold==True: # KFOLD
     if not os.path.isdir('./kfold_results'):  # 모델들을 저장할 상위폴더
       os.makedirs('./kfold_results')
     kfold = StratifiedKFold(n_splits=args.num_fold_k, random_state=args.seed, shuffle=True)
