@@ -57,7 +57,7 @@ python inference.py --model_dir=[model_path]
 
 - Pororo, Papago, Google Translator 등을 이용한 Back Translation
 
-[DataPreProcessing & Augmentation]: ./TestPreProcessing_PororoTagging.ipynb
+![DataPreProcessing & Augmentation]: ./TestPreProcessing_PororoTagging.ipynb
 [PaPago Translation]: ./네이버번역기이용Augmnetation.ipynb
 
 - 외부 데이터 활용
