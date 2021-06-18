@@ -56,18 +56,17 @@ python inference.py --model_dir=[model_path]
 - 다양한 Data Preprocessing (frequency 체크 후, 특수기호 중심 전처리)
 
 - Pororo, Papago, Google Translator 등을 이용한 Back Translation
-
-![DataPreProcessing & Augmentation]: ./TestPreProcessing_PororoTagging.ipynb
-[PaPago Translation]: ./네이버번역기이용Augmnetation.ipynb
+<a href="./TestPreProcessing_PororoTagging.ipynb" target="blank">DataPreProcessing & Augmentation </a>
+<a href="./네이버번역기이용Augmnetation.ipynb" target="blank">PaPago Translation </a>
 
 - 외부 데이터 활용
-
-[External Data]: ./가져온_외부파일_살펴보기.ipynb
+<a href="./가져온_외부파일_살펴보기.ipynb" target="blank">External Data </a>
 
 - Neptune 활용 위한 각종 Log 정보 저장
 
-[ConfusionMatrix]: ./customized_confusion_matrix.py
-[Plot for lr & acc & loss]: ./k_th_plot_from_logs.py
+<a href="./customized_confusion_matrix.py" target="blank">ConfusionMatrix </a>
+
+<a href="./k_th_plot_from_logs.py" target="blank">Plot for lr & acc & loss </a>
 
 - Various PLM Models from Huggingface 
 - K-Fold Ensemble
