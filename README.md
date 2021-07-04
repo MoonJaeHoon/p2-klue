@@ -1,12 +1,50 @@
 # Pstage02 (KLUE) Relation extraction
 
+stage2/
+├── __init__.py
+├── config/                   
+│   ├── __init__.py
+│   ├── parser.py             # parse yaml file to config object
+│   └── tree.py               # struct config
+│
+├── data/                     
+│   ├── __init__.py           
+│   ├── tokenizer.py          # augmentations (most are unused)
+│   ├── dataset.py            # different datasets for different models
+│   └── functional.py         # helper functions for data processing
+│
+
+├── modules/
+│   ├── __init__.py
+│   ├── models/               # define or load models
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── electra.py
+│   │   ├── xlmr.py
+│   │   └── classifier.py
+│   └── loss.py               # customized loss functions
+│                             
+└── utils/
+    ├── __init__.py
+    ├── log.py                # functionalities to log on csv and plot
+    ├── seed.py               # fix random seeds
+    └── utils.py              # utilities
+
+configs/                      # Some configuration files (yaml)
+
 
 
 ## training
 ```bash
 python train.py
 ```
-
+├── train.py/
+│   ├── seed_everything
+│   ├── compute_metrics            # loss & score
+│   ├── increment_output_dir       # Auto Making Directory for Saving Checkpoint
+│   ├── lower_dir_search           # Auto Making Directory for Saving Checkpoint
+│   ├── train                      
+│   └── main                       
 
 
 ## inference
