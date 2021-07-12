@@ -26,6 +26,8 @@ python inference.py --model_dir=[model_path]
 
 ## Summary
 
+![image](https://user-images.githubusercontent.com/54096561/125309531-cf5ec600-e36c-11eb-9b2e-30fca4b6fde5.png)
+
 
 
 ### Final LeaderBoard
